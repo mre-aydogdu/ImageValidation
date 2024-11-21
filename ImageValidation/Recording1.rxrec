@@ -30,6 +30,226 @@ mode="Desktop">
 		button="Left"
 		duration="500ms"
 		enabled="True"
+		loc="11;14"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="ac9c64e8-cd38-4b2c-ad1f-268016a61bd5"
+		sx="2274"
+		sy="2138"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="29d15b86-619d-4df2-8ffd-6284857ccefe"
+			sourcename="Recorder">
+				<element
+				capabilities="uiautomation, uiautomationscrollitem"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="picture"
+				rect="2263,2124,24,24"
+				role="picture"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="automationid"
+					type="System.String">
+						Icon
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						Image
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Image
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						image
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAComWrapper, Version=1.1.0.15, Culture=neutral, PublicKeyToken=78cbcf77433a85e5">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12836
+					</attribute>
+				</element>
+				<path>
+					/menubar[@processname='explorer']//container[@automationid='TaskbarFrame']/?/?/button[@automationid='Appid: C:\Users\Administrator\Desktop\RxDemoApp.exe']/picture[@automationid='Icon']
+				</path>
+				<robustPath>
+				</robustPath>
+			</info>
+			<helperscreenshot
+			guid="71f2f25d-c72e-4a1b-ab88-8dd4c7a6fa63">
+				/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDABwTFRgVERwYFhgfHRwhKUUtKSYmKVQ8QDJFZFhpZ2JY
+YF9ufJ6GbnWWd19giruLlqOpsbOxa4TC0MGszp6usar/2wBDAR0fHykkKVEtLVGqcmByqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqr/wAARCAA6AEADASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDCxRiu
+i/sm0/55n/vo0f2Va/8APM/99GujnRFjnsUYrov7Jtv+eZ/M0f2Tbf8APM/maftIi5Wc9ijFdD/Z
+Nt/zzP5ml/sq2/55t+Zo9pEOVnPYpcVv/wBl2v8AcP8A30aX+y7X+4fzNP2kRcrLtOQfNRinRj5v
+wrnNDPN5dtNMsMUbLExBJ4wOff2qL+0Lw9IFI9QpP9aBnbqOP+eg/wDQjVxorhjnyyP92cgflisk
+m1e52VJRhLl5V0/L1Kf9oXv/AD7j/vhv8adJe30USySQxqrcAkf/AF6tCKcEHy249bg/4VX1KXz9
+NilAxuccfgaJJpXuFOcZzUeVa/13L7j5vwptSSD5vwpuK1OMWnRj5vwpKdH978KAMkdNR/66L/6E
+a1biTyLaWbbu8tC2M4zgZrMh8tpb+OSVI90nBYgdCafe3+6xuE2R8xsMiZT29M1nBqx014tzvbt+
+RdtrgXCsCpjljOJI26qf6j0Pes26/wCQLB/v/wCNa17aGYrPAwjuYxhWPRh/db1H8utY1xKDpUcL
+fJNHJh4z1B5/McjmifwsWH/ixNiQfN+FNxUkg+b8KZWpzi0qnac0UUAQPY2cjs7QksxJJ3Hr+dZs
+2kSurhDGMggZJrZopJJdCnUqPTmf3mXdpeStILxs284KbIgzCLHKtgDJ5HP1qe10+zNtGz2ux2UF
+lBIwcc96u0UNJ7hGco7MGO45ooopkn//2Q==
+			</helperscreenshot>
+		</mouseitem>
+		<invokeactionrecorditem
+		action="EnsureVisible"
+		enabled="True"
+		optional="False"
+		searchpropertyid="8842ba89-c6b8-404b-be3d-d173dc97af5c">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="29d15b86-619d-4df2-8ffd-6284857ccefe"
+			sourcename="RepositoryEditor">
+				<element
+				capabilities="uiautomation, uiautomationscrollitem"
+				dontcache="False"
+				enabled="True"
+				flavor="uia"
+				hasfocus="False"
+				index="0"
+				prefcap="picture"
+				rect="2263,2124,24,24"
+				role="picture"
+				snapElem=""
+				valid="True"
+				visible="True">
+					<attribute
+					name="automationid"
+					type="System.String">
+						Icon
+					</attribute>
+					<attribute
+					name="classname"
+					type="System.String">
+						Image
+					</attribute>
+					<attribute
+					name="controltype"
+					type="System.String">
+						Image
+					</attribute>
+					<attribute
+					name="frameworkid"
+					type="System.String">
+						XAML
+					</attribute>
+					<attribute
+					name="iscontentelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iscontrolelement"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="iskeyboardfocusable"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="ispassword"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="isrequiredforform"
+					type="System.Boolean">
+						False
+					</attribute>
+					<attribute
+					name="localizedcontroltype"
+					type="System.String">
+						image
+					</attribute>
+					<attribute
+					name="orientation"
+					type="System.Windows.Automation.OrientationType, UIAComWrapper, Version=1.1.0.15, Culture=neutral, PublicKeyToken=78cbcf77433a85e5">
+						None
+					</attribute>
+					<attribute
+					name="processid"
+					type="System.Int32">
+						12836
+					</attribute>
+				</element>
+				<path>
+					/menubar[@processname='explorer']//container[@automationid='TaskbarFrame']/?/?/button[@automationid='Appid: C:\Users\Administrator\Desktop\RxDemoApp.exe']/picture[@automationid='Icon']
+				</path>
+				<robustPath>
+				</robustPath>
+			</info>
+			<arguments
+			id="e0a5af81-a6c9-4858-960f-f5426bc75218">
+			</arguments>
+		</invokeactionrecorditem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="500ms"
+		enabled="True"
 		loc="109;5"
 		movetime="300ms"
 		optional="False"
@@ -1418,10 +1638,9 @@ oooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==
 					name="ErrorImage"
 					readonly="False"
 					type="System.Drawing.Image, System.Drawing, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-						iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAIAAACp9tltAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
-jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABFSURBVChTY2hpaiESgZT+JwSOHT7GAASDSykD
-AwhhsHGYClGBpA4IcDsAVR0QUGgqsgokNm4HYIBBpBTIIohASokFDAwAPQLsVqq82D0AAAAASUVO
-RK5CYII=
+						iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAIAAACp9tltAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
+AAAOxAAADsQBlSsOGwAAAEVJREFUKFNjaGlqIRKBlP4nBI4dPsYABINLKQMDCGGwcZgKUYGkDghw
+OwBVHRBQaCqyCiQ2bgdggEGkFMgiiEBKiQUMDAA9AuxWqrzYPQAAAABJRU5ErkJggg==
 					</dynamicattribute>
 					<dynamicattribute
 					description="No description available."
@@ -5681,10 +5900,10 @@ F46cO+ng4mhmvneXhq2Bur2xhqOJ2kETpYMmCrx5lJL7dkkCvxyMVe0MVZwt9ZC9GvXUdmsq/D89
 					name="InitialImage"
 					readonly="False"
 					type="System.Drawing.Image, System.Drawing, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-						iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAIAAACp9tltAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
-jwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAABpSURBVChTvZBBCsAgDAT37eLPCn7LJtnUkniI
-UOiwhzVODore+mFUnRXjGhCorlWGxiKrE2AEGot/VHMcTpisJnSzwQN8VnmsVTXsYdL1zpCe1cfz
-b+CQBDV62Q6qtg16wqtKK2O7hwA3vn51v2tg2VUAAAAASUVORK5CYII=
+						iVBORw0KGgoAAAANSUhEUgAAAA4AAAAQCAIAAACp9tltAAAABGdBTUEAALGPC/xhBQAAAAlwSFlz
+AAAOxAAADsQBlSsOGwAAAGlJREFUKFO9kEEKwCAMBPft4s8Kfssm2dSSeIhQ6LCHNU4Oit76YVSd
+FeMaEKiuVYbGIqsTYAQai39UcxxOmKwmdLPBA3xWeaxVNexh0vXOkJ7Vx/Nv4JAENXrZDqq2DXrC
+q0orY7uHADe+fnW/a2DZVQAAAABJRU5ErkJggg==
 					</dynamicattribute>
 					<dynamicattribute
 					description="No description available."

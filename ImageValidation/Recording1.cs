@@ -79,15 +79,23 @@ namespace ImageValidation
 
             Init();
 
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.ImageBasedAutomation' at 109;5.", repo.RxMainFrame.ImageBasedAutomationInfo, new RecordItemIndex(0));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'Explorer.Icon' at 11;14.", repo.Explorer.IconInfo, new RecordItemIndex(0));
+            repo.Explorer.Icon.Click("11;14");
+            Delay.Milliseconds(200);
+            
+            Report.Log(ReportLevel.Info, "Invoke action", "Invoking EnsureVisible() on item 'Explorer.Icon'.", repo.Explorer.IconInfo, new RecordItemIndex(1));
+            repo.Explorer.Icon.EnsureVisible();
+            Delay.Milliseconds(0);
+            
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.ImageBasedAutomation' at 109;5.", repo.RxMainFrame.ImageBasedAutomationInfo, new RecordItemIndex(2));
             repo.RxMainFrame.ImageBasedAutomation.Click("109;5");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.ChkShowImage' at 9;8.", repo.RxMainFrame.ChkShowImageInfo, new RecordItemIndex(1));
+            Report.Log(ReportLevel.Info, "Mouse", "Mouse Left Click item 'RxMainFrame.ChkShowImage' at 9;8.", repo.RxMainFrame.ChkShowImageInfo, new RecordItemIndex(3));
             repo.RxMainFrame.ChkShowImage.Click("9;8");
             Delay.Milliseconds(200);
             
-            Report.Log(ReportLevel.Info, "Validation", "Validating CompareImage (Screenshot: 'Screenshot1' with region {X=0,Y=0,Width=402,Height=263}) on item 'RxMainFrame.TheCat'.", repo.RxMainFrame.TheCatInfo, new RecordItemIndex(2));
+            Report.Log(ReportLevel.Info, "Validation", "Validating CompareImage (Screenshot: 'Screenshot1' with region {X=0,Y=0,Width=402,Height=263}) on item 'RxMainFrame.TheCat'.", repo.RxMainFrame.TheCatInfo, new RecordItemIndex(4));
             Validate.CompareImage(repo.RxMainFrame.TheCatInfo, TheCat_Screenshot1, TheCat_Screenshot1_Options);
             Delay.Milliseconds(100);
             

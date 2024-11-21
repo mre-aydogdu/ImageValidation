@@ -6,6 +6,7 @@
   <Array name="files">
     <Element value="ImageValidation.rxtst" />
     <Element value="Recording1.rxrec" />
+    <Element value="StartAUT.rxrec" />
   </Array>
   <Properties name="projectSavedData">
     <Properties name="customTool">

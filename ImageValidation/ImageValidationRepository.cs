@@ -28,6 +28,7 @@ namespace ImageValidation
     {
         static ImageValidationRepository instance = new ImageValidationRepository();
         ImageValidationRepositoryFolders.RxMainFrameAppFolder _rxmainframe;
+        ImageValidationRepositoryFolders.ExplorerAppFolder _explorer;
 
         /// <summary>
         /// Gets the singleton class instance representing the ImageValidationRepository element repository.
@@ -45,6 +46,7 @@ namespace ImageValidation
             : base("ImageValidationRepository", "/", null, 0, false, "ac334153-6baa-4f41-861e-7fa7eba068d5", ".\\RepositoryImages\\ImageValidationRepositoryac334153.rximgres")
         {
             _rxmainframe = new ImageValidationRepositoryFolders.RxMainFrameAppFolder(this);
+            _explorer = new ImageValidationRepositoryFolders.ExplorerAppFolder(this);
         }
 
 #region Variables
@@ -70,6 +72,15 @@ namespace ImageValidation
         public virtual ImageValidationRepositoryFolders.RxMainFrameAppFolder RxMainFrame
         {
             get { return _rxmainframe; }
+        }
+
+        /// <summary>
+        /// The Explorer folder.
+        /// </summary>
+        [RepositoryFolder("772b6b8a-fa4c-4816-b630-2522a6cee455")]
+        public virtual ImageValidationRepositoryFolders.ExplorerAppFolder Explorer
+        {
+            get { return _explorer; }
         }
     }
 
@@ -228,6 +239,72 @@ namespace ImageValidation
                 get
                 {
                     return _thecatInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The ExplorerAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("772b6b8a-fa4c-4816-b630-2522a6cee455")]
+        public partial class ExplorerAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _iconInfo;
+
+            /// <summary>
+            /// Creates a new Explorer  folder.
+            /// </summary>
+            public ExplorerAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Explorer", "/menubar[@processname='explorer']", parentFolder, 30000, null, true, "772b6b8a-fa4c-4816-b630-2522a6cee455", "")
+            {
+                _iconInfo = new RepoItemInfo(this, "Icon", ".//container[@automationid='TaskbarFrame']/?/?/button[@automationid='Appid: C:\\Users\\Administrator\\Desktop\\RxDemoApp.exe']/picture[@automationid='Icon']", "", 30000, null, "29d15b86-619d-4df2-8ffd-6284857ccefe");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("772b6b8a-fa4c-4816-b630-2522a6cee455")]
+            public virtual Ranorex.MenuBar Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.MenuBar>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("772b6b8a-fa4c-4816-b630-2522a6cee455")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Icon item.
+            /// </summary>
+            [RepositoryItem("29d15b86-619d-4df2-8ffd-6284857ccefe")]
+            public virtual Ranorex.Picture Icon
+            {
+                get
+                {
+                    return _iconInfo.CreateAdapter<Ranorex.Picture>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Icon item info.
+            /// </summary>
+            [RepositoryItemInfo("29d15b86-619d-4df2-8ffd-6284857ccefe")]
+            public virtual RepoItemInfo IconInfo
+            {
+                get
+                {
+                    return _iconInfo;
                 }
             }
         }
