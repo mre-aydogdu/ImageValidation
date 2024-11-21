@@ -15,6 +15,7 @@ name="ImageValidationRepository">
 		<appfolder
 		addcaps="form,control,nativewindow"
 		capname="form"
+		ensurevisible="False"
 		id="ad06defc-1d2f-403b-98d2-e1e5d050c808"
 		isrooted="True"
 		name="RxMainFrame"

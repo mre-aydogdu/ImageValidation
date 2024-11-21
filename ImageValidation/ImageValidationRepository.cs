@@ -93,7 +93,7 @@ namespace ImageValidation
             /// Creates a new RxMainFrame  folder.
             /// </summary>
             public RxMainFrameAppFolder(RepoGenBaseFolder parentFolder) :
-                    base("RxMainFrame", "/form[@controlname='RxMainFrame']", parentFolder, 30000, null, true, "ad06defc-1d2f-403b-98d2-e1e5d050c808", "")
+                    base("RxMainFrame", "/form[@controlname='RxMainFrame']", parentFolder, 30000, false, true, "ad06defc-1d2f-403b-98d2-e1e5d050c808", "")
             {
                 _imagebasedautomationInfo = new RepoItemInfo(this, "ImageBasedAutomation", "?/?/tabpage[@accessiblename='Image-based automation']", "", 30000, null, "e21d0a8c-4c21-40d7-b93f-2d7fb62a97bc");
                 _chkshowimageInfo = new RepoItemInfo(this, "ChkShowImage", "?/?/tabpage[@controlname='RxTabImageBased']/checkbox[@controlname='chkShowImage']", "", 30000, null, "a69d5e6e-6c86-47c4-af5d-bae233b05ff3");
