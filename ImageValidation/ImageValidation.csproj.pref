@@ -1,11 +1,15 @@
 ﻿<Properties>
   <Array name="active">
-    <Element value="ImageValidation.rxtst" />
+    <Element value="Recording1.rxrec" />
   </Array>
   <Array name="bookmarks" />
   <Array name="files">
     <Element value="ImageValidation.rxtst" />
     <Element value="Recording1.rxrec" />
   </Array>
-  <Properties name="projectSavedData" />
+  <Properties name="projectSavedData">
+    <Properties name="customTool">
+      <runOnBuild value="False" />
+    </Properties>
+  </Properties>
 </Properties>
