@@ -47,6 +47,15 @@ mode="Desktop">
 			<args>
 			</args>
 		</runapprecorditem>
+		<explicitdelayitem
+		duration="3000ms"
+		enabled="True"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</explicitdelayitem>
 	</recorditems>
 	<repository
 	id="9eba3480-be97-454d-a1a9-f7a068a312ea"
