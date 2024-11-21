@@ -139,7 +139,7 @@
 	<datasources>
 	</datasources>
 	<testconfigurations
-	default="TestRun1">
+	default="TestRun">
 		<testconfiguration
 		name="TestRun">
 			<testcontainer
