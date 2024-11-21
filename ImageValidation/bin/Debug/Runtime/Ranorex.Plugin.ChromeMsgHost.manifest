@@ -1,0 +1,21 @@
+{
+  "name": "com.ranorex.chrome_msghost",
+  "description": "Ranorex Chrome Message Host",
+  "path": "Ranorex.Plugin.ChromeMsgHost.exe",
+  "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://oikljfgbnkgchldijdkbancpahmepnen/",
+        "chrome-extension://goljdembfpbdneicecggginkcegfnlnb/",
+        "chrome-extension://nappeokhoobbncgoehjdnpbfhbejlaod/",
+        "chrome-extension://ifejahgfanchjhbdafkeohhemobgkdco/",
+        "chrome-extension://edgliickhoabaoagbijelolelopnioaa/",
+        "chrome-extension://ehdgkpgamigdofofcionkfbdfglehmkd/",
+        "chrome-extension://iamhfafohblpnbkbhibaimfkefghibmg/",
+        "chrome-extension://ofphgcanpaggnafkdejdkfnmjiaibpgc/",
+        "chrome-extension://hmadpaomnonmgbpbfadkogoiaekbeigi/",
+        "chrome-extension://dbbfblnohambigcknjdkifcokkedbaph/",
+        "chrome-extension://hojnidgllopambhfdnfleljkgogcbkho/",
+        "chrome-extension://blbjnedpmjikmgjjbmihgbaplihinojl/",
+        "chrome-extension://egdlgaljianpgdlmfijpphbadibfncdm/"
+    ]
+}

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="e7f721fb-4c48-4a12-b2d2-94fe024e0611"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="StartAUT"
+	namespace="ImageValidation">
+	</codegen>
+	<variables>
+		<var
+		id="5b28c063-6690-4a0e-ab4c-964e5934c9d1"
+		name="StartAutProcessIDVar">
+		</var>
+	</variables>
+	<recorditems>
+		<runapprecorditem
+		enabled="True"
+		maximized="False"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="ReturnVariable"
+				variable="StartAutProcessIDVar">
+				</binding>
+			</bindings>
+			<filename>
+				C:\Users\Administrator\Desktop\RxDemoApp.exe
+			</filename>
+			<args>
+			</args>
+		</runapprecorditem>
+	</recorditems>
+	<repository
+	id="9eba3480-be97-454d-a1a9-f7a068a312ea"
+	name="ImageValidationRepository"
+	relativepath="ImageValidationRepository.rxrep">
+		<codegen
+		classname="ImageValidationRepository"
+		namespace="ImageValidation">
+		</codegen>
+		<rootfolder
+		id="ac334153-6baa-4f41-861e-7fa7eba068d5"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		StartAUT.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

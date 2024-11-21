@@ -1,0 +1,13 @@
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\bin\Debug\ImageValidation.rxtmg
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\bin\Debug\ImageValidation.rxtst
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\bin\Debug\RepositoryImages\ImageValidationRepositoryac334153.rximgres
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\bin\Debug\ImageValidation.exe.config
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\bin\Debug\ImageValidation.xml
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\bin\Debug\ImageValidation.exe
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\bin\Debug\ImageValidation.pdb
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\bin\Debug\Ranorex.Core.Resolver.dll
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\obj\x86\Debug\ImageValidation.csproj.AssemblyReference.cache
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\obj\x86\Debug\ImageValidation.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\obj\x86\Debug\ImageValidation.csproj.CopyComplete
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\obj\x86\Debug\ImageValidation.exe
+C:\Users\Administrator\Documents\Ranorex\RanorexStudio Projects\ImageValidation\ImageValidation\obj\x86\Debug\ImageValidation.pdb

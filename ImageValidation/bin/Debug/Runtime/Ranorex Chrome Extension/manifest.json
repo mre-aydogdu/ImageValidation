@@ -1,0 +1,76 @@
+{
+    "name": "Ranorex Automation",
+    "version": "1.4.1",
+    "manifest_version": 3,
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtGMZyFtO4DGyTHyfJJ1WCQO/hCJmx9jZyUGG3CxdBdu4ClYJ0WV/ltdNY8qM90hMGAFt0/30YYSsLAW2+G2Bzs0iRbbOlCGz3lx4uNjFtHC6yZdxEqR2HDoAeNGhvEnFBPZTRrSO02JY/5Zdqyy4mxIknJKMDWh6n/ul0dXscWMLhC34PG3Ui1YXmkZl6lhc/7RftILw5d/T6ewPQBwr1/lANunO35Obnmmlpo4QBeKNQTVsT71lghvXcGOTLmhW8cGzSDavjqiL2da5a9Fvc1JF9RwGsLeLJyz9QEIoa/U4fph3H0ISYwbq8njRoxt0jyt+r0vbV26M3A5D9hvJIQIDAQAB",
+    "description": "Ranorex automation support.",
+    "background": {
+        "service_worker": "background.js"
+    },
+	    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "icons": {
+        "16": "icon.png",
+        "48": "icon48.png",
+        "32": "icon32.png",
+        "128": "icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "background",
+        "nativeMessaging",
+        "tabs",
+        "storage",
+        "alarms",
+	    "declarativeNetRequest",
+        "declarativeNetRequestFeedback"
+
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*",
+        "*://*/*",
+		"*://example.com/*",
+        "*://testbook.com/*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "<all_urls>"
+            ],
+            "match_about_blank": true,
+            "js": [
+                "rxpath.min.js",
+                "msgport.js",
+                "nodemap.js",
+                "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "rxpath.min.js",
+                "msgport.js",
+                "nodemap.js",
+                "content.js"
+            ],
+            "extension_ids": [ "blbjnedpmjikmgjjbmihgbaplihinojl" ],
+            "matches": [ "<all_urls>" ]
+        }
+    ]
+}

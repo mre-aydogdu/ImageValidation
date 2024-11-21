@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="2cbf25b3-958f-4b74-95b6-550eddfaec13"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="CloseAUT"
+	namespace="ImageValidation">
+	</codegen>
+	<variables>
+		<var
+		id="e9b4b6b3-f2f0-4a1d-90f2-97fa2023904e"
+		name="CloseAutProcessIDVar">
+			-1
+		</var>
+	</variables>
+	<recorditems>
+		<closeapprecorditem
+		enabled="True"
+		graceperiod="500ms"
+		method="CloseWindowByProcessID"
+		optional="False"
+		searchpropertyid="2a76782d-ad91-41e9-bac7-4816243a7dac">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="ProcessID"
+				variable="CloseAutProcessIDVar">
+				</binding>
+			</bindings>
+		</closeapprecorditem>
+	</recorditems>
+	<repository
+	id="9eba3480-be97-454d-a1a9-f7a068a312ea"
+	name="ImageValidationRepository"
+	relativepath="ImageValidationRepository.rxrep">
+		<codegen
+		classname="ImageValidationRepository"
+		namespace="ImageValidation">
+		</codegen>
+		<rootfolder
+		id="ac334153-6baa-4f41-861e-7fa7eba068d5"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		CloseAUT.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
