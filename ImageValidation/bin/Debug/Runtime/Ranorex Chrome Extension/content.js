@@ -479,52 +479,115 @@ function getAllDynamicIds(r) {
         r({ err: 'Error ' + e });
     }
 }
-// string ExecuteScript(int wndId, int tabId, NpPtr elemId, string code);
-RXmsg.addHandler("executeScript", function (m, r) {
-    console.log("executescript is hit", m);
+
+function scrollToPoint(responseCallback, yCoordinate, xCoordinate) {
     try {
-        if (m.arg1 != null && m.arg1 == "getallids") {
-            //console.log("getAllDynamicIds is hit");
-            getAllDynamicIds(r);
-        }
-        else if (m.arg1 != null && m.arg1 == "raiseEvent") {
-            raiseEvent(m.arg2[0], m.arg2[1], m.arg2[2], r);
-        }
-        else {
-            //console.log("Change me", m);
-            //debugger;
-            var targetWnd;
-            if (m.arg0 > 0)
-                targetWnd = RX.node(m.arg0).contentWindow;
-            else targetWnd = window;
+        console.log("Hitting scrollToPoint");
+        var e = document.documentElement;
+        e.scrollLeft = xCoordinate;
+        e.scrollTop = yCoordinate;
+        var R = Math.round;
+        var b = document.body;
 
-            var targetDoc = targetWnd.document;
-            var script = targetDoc.createElement('script');
-            targetWnd._rxresult = undefined;
-            targetWnd._rxcomplete = false;
-            targetWnd._rxtimeout = 100;
-            script.textContent = 'var result = undefined; try{ result = ' + m.arg1 + ';}catch(e){}; document.documentElement.setAttribute("rxresult", result); document.documentElement.setAttribute("rxcomplete", "true");';
-            (targetDoc.head || targetDoc.documentElement).appendChild(script);
-            script.parentNode.removeChild(script);
-
-            var cb = function (wnd) {
-                if (wnd.document.documentElement.getAttribute("rxcomplete") !== "true" && wnd._rxtimeout > 0) {
-                    wnd._rxtimeout = wnd._rxtimeout - 1;
-                    setTimeout(cb, 1, wnd);
-                }
-                else {
-                    let resultStr = wnd.document.documentElement.getAttribute("rxresult") + "";
-
-                    wnd.document.documentElement.removeAttribute("rxresult");
-                    wnd.document.documentElement.removeAttribute("rxcomplete");
-                    r({ result: resultStr });
-                }
-            }
-            setTimeout(cb, 0, targetWnd);
+        if (e.scrollTop == 0) {
+            document.body.scrollLeft = xCoordinate; document.body.scrollTop = yCoordinate;
         }
+
+        responseCallback({ result: [R(e.scrollWidth), R(e.scrollHeight), R(e.clientWidth), R(e.clientHeight), R(b.clientWidth), R(b.clientHeight), R(window.innerWidth), R(window.innerHeight)].join(',') });
+    } catch (e) {
+        console.log("Ranorex: Faild to execute scrollToPoint script: " + e);
+        responseCallback({ err: "Error " + e.stack });
     }
-    catch (e) {
-        r({ err: 'Error ' + e + ' ' + e.stack });
+}
+
+function disableTransition(responseCallback) {
+    try {
+        console.log("Hitting disableTransition");
+        if (document.head) {
+            if (!document.head._rxtmpnotr) {
+                var s = document.createElement('style');
+                s.textContent = '.rxtmpnotr{-webkit-transition: none !important;-moz-transition: none !important;-ms-transition: none !important;transition: none !important; animation-duration: 0s !important}';
+                document.head.appendChild(s); document.head._rxtmpnotr = true;
+            }
+            var elems = document.getElementsByTagName('*'); var len = elems.length;
+            for (var i = 0; i < len; i++) {
+                if ((elems[i].className || '').toString().indexOf('rxtmpnotr') === -1) elems[i].className += ' rxtmpnotr';
+            }
+        };
+        responseCallback({ result: "disableTransition script executed" });
+    } catch (e) {
+        console.log("Ranorex: Faild to execute disableTransition script: " + e);
+        responseCallback({ err: "Error " + e.stack });
+    }
+}
+
+function enableTransition(responseCallback) {
+    try {
+        console.log("Hitting enableTransition");
+        var elems = document.getElementsByTagName('*');
+        var len = elems.length;
+        for (var i = 0; i < len; i++) {
+            elems[i].className = (elems[i].className || '').toString().replace('rxtmpnotr', '').trim();
+        }
+        responseCallback({ result: "enableTransition script executed" });
+    } catch (e) {
+        console.log("Ranorex: Faild to execute enableTransition script: " + e);
+        responseCallback({ err: "Error " + e.stack });
+    }
+}
+
+function hidePositionFixed(responseCallback) {
+    try {
+        console.log("Hitting hidePositionFixed");
+        if (!document.head._rxtmphide) {
+            var s = document.createElement('style');
+            s.textContent = '.rxtmphide{  display: none !important; }';
+            document.head.appendChild(s);
+            document.head._rxtmphide = true;
+        }
+        var elems = document.getElementsByTagName('*'); var len = elems.length;
+        for (var i = 0; i < len; i++) {
+            if (window.getComputedStyle(elems[i], null).getPropertyValue('position') == 'fixed') {
+                if ((elems[i].className || '').toString().indexOf('rxtmphide') === -1) elems[i].className += ' rxtmphide';
+            }
+        }
+        responseCallback({ result: "hidePositionFixed script executed" });
+    } catch (e) {
+        console.log("Ranorex: Faild to execute hidePositionFixed script: " + e);
+        responseCallback({ err: "Error " + e.stack });
+    }
+}
+
+function restorePositionFixed(responseCallback) {
+    try {
+        console.log("Hitting restorePositionFixed");
+        var elems = document.getElementsByTagName('*'); var len = elems.length;
+        for (var i = 0; i < len; i++) {
+            elems[i].className = (elems[i].className || '').toString().replace('rxtmphide', '').trim();
+        }
+        responseCallback({ result: "restorePositionFixed script executed" });
+    } catch (e) {
+        console.log("Ranorex: Faild to execute restorePositionFixed script: " + e);
+        responseCallback({ err: "Error " + e.stack });
+    }
+}
+
+chrome.runtime.onMessage.addListener(function (m, sender, r) {
+    console.log("received : ", m.message, m.arg2_0, m.arg2_1, m.arg2_2);
+    if (m.message === "getallids") {
+        getAllDynamicIds(r);
+    } else if (m.message === "raiseEvent") {
+        raiseEvent(m.arg2_0, m.arg2_1, m.arg2_2, r);
+    } else if (m.message === "scrollToPoint") {
+        scrollToPoint(r, parseInt(m.arg2_0), parseInt(m.arg2_1));
+    } else if (m.message === "disableTransitions") {
+        disableTransition(r);
+    } else if (m.message === "enableTransitions") {
+        enableTransition(r);
+    } else if (m.message === "hidePositionFixed") {
+        hidePositionFixed(r);
+    } else if (m.message === "restorePositionFixed") {
+        restorePositionFixed(r);
     }
 });
 

@@ -5,13 +5,30 @@ window.RX = RX;
 RX.init = function () {
     RX.globId = Math.floor((Math.random() * 1000000) + 1);
     RX.idToNode = [];
-    window.addEventListener('DOMNodeRemovedFromDocument', function (evt) {
-        var n = evt.target;
-        if (n.nodeType == 1 && n.$RXid) {
-            delete RX.idToNode[n.$RXid];
-            delete n.$RXid;
-        }
-    }, true);
+	
+	var observer = new MutationObserver(mutations => {
+        mutations.forEach(({ removedNodes }) => {
+            removedNodes.forEach(node => {
+                if(node.nodeType === 1 && node.$RXid) {
+                    delete RX.idToNode[node.$RXid];
+                    delete node.$RXid;
+					console.log("Remove node id " + node.$RXid);
+                }
+            })
+        })
+    })
+	
+	window.onload = function() {
+        var config = {
+            childList: true,
+            subtree: true,
+            attributes: true,
+            characterData: true
+        };
+        //note this observe method call
+        observer.observe(window.document, config);
+        console.log("Observer is registered");
+    };
 }
 
 RX.node = function (id) {

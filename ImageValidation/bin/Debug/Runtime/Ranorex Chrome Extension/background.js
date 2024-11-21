@@ -89,7 +89,7 @@ chrome.runtime.onConnect.addListener(function (port) {
 // handles request by the page to reflect its tabid/windowid
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
-        if (sender.tab) {
+		if (sender.tab) {
             sendResponse({
                 "query": "tabinfo",
                 "tabid": sender.tab.id,
@@ -246,6 +246,55 @@ RXmsg.addDefaultHandler(function (m, r) {
     }
 });
 
+// Execute user defined JS scripts
+RXmsg.addHandler("executeScript", function (m, r) {
+	console.log("execute background script is hit", m);
+
+    const contentFunc = ['getallids', 'raiseEvent', 'scrollToPoint', 'disableTransitions', 'enableTransitions', 'hidePositionFixed', 'restorePositionFixed'];
+    const code = m.arg1;
+    const tabId = m.tabid;
+
+    try {
+        if (code != null && contentFunc.includes(code)) {
+            chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+                // Send a message to the content script in the active tab
+                chrome.tabs.sendMessage(tabId, { message: code, arg2_0: m.arg2[0], arg2_1: m.arg2[1], arg2_2: m.arg2[2] }, (response) => {
+                    if (response) {
+                        console.log(response);
+                        r(response);
+                    }
+                    else
+                    {
+                        r({ err: "Error evaluating Javascript code - predefined" });
+                    }
+                });
+            });
+        } 
+        else {
+            chrome.scripting.executeScript({
+                target: { tabId: tabId },
+                func: (code) => {
+                    return Function(`'use strict'; return (${code})`)();
+                },
+                args: [code, tabId],
+                world: "MAIN"
+            }, getScriptResults);
+
+            function getScriptResults(results) {
+                if (results.length > 0) {
+                    const result = results[0].result;
+                    r({ result: result });
+                }
+                else {
+                    r({ err: "Error evaluating Javascript code" });
+                }
+            }
+        }
+    }
+    catch (e) {
+        r({ err: 'Error ' + e + ' ' + e.stack });
+    }
+});
 
 // browser toolbar button
 //This function is not needed in V3 as this alert is supported from manifest.json's 'action' property
